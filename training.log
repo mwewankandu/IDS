@@ -1,0 +1,42 @@
+2025-08-19 16:03:49,690 - INFO - Loading and preprocessing data...
+2025-08-19 16:03:56,811 - INFO - Training base XGBoost model...
+2025-08-19 16:04:05,963 - INFO - Evaluating base model...
+2025-08-19 16:04:06,138 - INFO - 
+Base Model Classification Report:
+2025-08-19 16:04:06,203 - INFO -               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56864
+           1       0.77      0.86      0.81        98
+
+    accuracy                           1.00     56962
+   macro avg       0.89      0.93      0.91     56962
+weighted avg       1.00      1.00      1.00     56962
+
+2025-08-19 16:04:06,204 - INFO - 
+Base Model Confusion Matrix:
+2025-08-19 16:04:06,215 - INFO - [[56839    25]
+ [   14    84]]
+2025-08-19 16:04:06,242 - INFO - AUPRC: 0.8737
+2025-08-19 16:04:06,245 - INFO - Performing hyperparameter tuning...
+2025-08-19 16:06:36,630 - INFO - Best parameters: {'learning_rate': 0.1, 'max_depth': 7, 'scale_pos_weight': 50}
+2025-08-19 16:06:36,630 - INFO - Evaluating tuned model...
+2025-08-19 16:06:36,792 - INFO - 
+Tuned Model Classification Report:
+2025-08-19 16:06:36,861 - INFO -               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56864
+           1       0.32      0.88      0.47        98
+
+    accuracy                           1.00     56962
+   macro avg       0.66      0.94      0.73     56962
+weighted avg       1.00      1.00      1.00     56962
+
+2025-08-19 16:06:36,862 - INFO - 
+Tuned Model Confusion Matrix:
+2025-08-19 16:06:36,872 - INFO - [[56680   184]
+ [   12    86]]
+2025-08-19 16:06:36,898 - INFO - AUPRC: 0.8540
+2025-08-19 16:06:36,900 - INFO - Finding optimal threshold...
+2025-08-19 16:06:37,009 - INFO - Optimal threshold: 0.9998
+2025-08-19 16:06:39,203 - INFO - Saving best model...
+2025-08-19 16:06:39,212 - INFO - Training completed successfully!
